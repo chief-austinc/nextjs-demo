@@ -4,8 +4,17 @@ terraform {
       source  = "cloudflare/cloudflare"
       version = "~> 3.0"
     }
+    github = {
+      source  = "integrations/github"
+      version = "~> 4.0"
+    }
   }
 }
+
+provider "github" {
+    token = var.token # or `GITHUB_TOKEN`
+}
+
 
 provider "cloudflare" {
   api_token = "0vxMG-gmaaQI7gvTEnkmt0PSmuC0uUgj11yQ61UU"

@@ -40,7 +40,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <Link href="/test">another page</Link>
+          Welcome to <Link href="/test">another page!!</Link>
         </h1>
         {/* {data.viewer && <ProfileCard {...data.viewer} />} */}
       </main>
