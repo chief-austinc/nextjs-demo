@@ -21,10 +21,6 @@ import { ProfileCard } from "../components/profile-card";
 //   }
 // `);
 
-export function getServerSideProps() {
-  return {};
-}
-
 export default function Home() {
   // const { data, loading, error } = useQuery(HOME_PAGE, {
   //   // variables: { id: "123" },

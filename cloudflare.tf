@@ -17,7 +17,7 @@ resource "cloudflare_pages_project" "build_config" {
   production_branch = "main"
 
   build_config {
-    build_command       = "npm run export"
+    build_command       = "npm run build:app"
     destination_dir     = "out"
     root_dir            = "/"
     # web_analytics_tag   = "cee1c73f6e4743d0b5e6bb1a0bcaabcc"
@@ -25,10 +25,10 @@ resource "cloudflare_pages_project" "build_config" {
   }
 
   source {
-    type = "gitlab"
+    type = "github"
     config {
-      owner                         = "austinchauncey"
-      repo_name                     = "cloudflare-pages-poc"
+      owner                         = "chief-austinc"
+      repo_name                     = "nextjs-demo"
       production_branch             = "main"
       pr_comments_enabled           = true
       deployments_enabled           = true
