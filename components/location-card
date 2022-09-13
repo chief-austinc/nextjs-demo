@@ -1,0 +1,31 @@
+import { gql } from "../gql";
+import { LocationCard_LocationFragmentFragment } from "../gql/graphql";
+// import { gql } from "@apollo/client";
+// import { FragmentType } from "../gql";
+
+type LocationCardProps = {} & LocationCard_LocationFragmentFragment;
+
+export function LocationCard({
+  id,
+  name,
+  description,
+  photo,
+}: LocationCardProps) {
+  return (
+    <div>
+      <h1>{name}</h1>
+      <p>id: {id}</p>
+    </div>
+  );
+}
+
+LocationCard.fragments = {
+  location: gql(`
+    fragment LocationCard_LocationFragment on Location {
+      id
+      name
+      description
+      photo
+    }
+  `),
+};

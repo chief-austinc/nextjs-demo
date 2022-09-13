@@ -1,0 +1,18 @@
+schema: ./schema.graphql
+documents:
+  - "./pages/**/*.ts"
+  - "./pages/**/*.tsx"
+  - "./components/**/*.ts"
+  - "./components/**/*.tsx"
+  - "!gql/**/*"
+plugins:
+  - "typescript"
+  - "typescript-operations"
+  - "typescript-react-apollo"
+generates:
+  ./gql/:
+    config:
+      skipDocumentsValidation: true
+      flattenGeneratedTypes: true
+      applyFragmentArgumentTransform: true
+    preset: gql-tag-operations-preset

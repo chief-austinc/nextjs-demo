@@ -1,0 +1,10 @@
+type Query {
+  viewer: User
+}
+
+type User {
+  id: ID!
+  name: String
+  email: String!
+  arrayItem(id: ID): String
+}
