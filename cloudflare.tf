@@ -11,7 +11,7 @@ provider "cloudflare" {
   api_token = "0vxMG-gmaaQI7gvTEnkmt0PSmuC0uUgj11yQ61UU"
 }
 
-resource "cloudflare_pages_project" "build_config" {
+resource "cloudflare_pages_project" "next-js-demo-austin" {
   account_id        = "ace4aa22fec291d6ac87b4a9a4658fbf"
   name              = "next-js-demo-austin"
   production_branch = "main"
